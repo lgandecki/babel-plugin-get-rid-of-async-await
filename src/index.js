@@ -21,6 +21,7 @@ const getRidOfAsyncAwait = function(path, file) {
 
 export default function(api, options) {
   return {
+    inherits: require("babel-plugin-syntax-async-functions"),
     visitor: {
       Function(path, state) {
         if (!path.node.async || path.node.generator) return;
