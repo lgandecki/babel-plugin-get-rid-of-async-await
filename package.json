@@ -1,0 +1,21 @@
+{
+  "name": "babel-plugin-transform-async-to-generator",
+  "version": "0.0.1",
+  "description": "Get-rid-of-async-await",
+  "repository": "https://github.com/lgandecki/babel-plugin-get-rid-of-async-await.git",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "author": "Łukasz Gandecki",
+  "devDependencies": {
+    "@babel/helper-plugin-test-runner": "^7.0.0-beta.35",
+    "babel-cli": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
