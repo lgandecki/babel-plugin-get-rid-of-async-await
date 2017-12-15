@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-transform-async-to-generator",
+  "name": "babel-plugin-get-rid-of-async-await",
   "version": "0.0.1",
   "description": "Get-rid-of-async-await",
   "repository": "https://github.com/lgandecki/babel-plugin-get-rid-of-async-await.git",
