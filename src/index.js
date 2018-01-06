@@ -25,6 +25,14 @@ export default function(api, options) {
     visitor: {
       Function(path, state) {
         if (!path.node.async || path.node.generator) return;
+        if (state.opts.onlyInPath) {
+          const doNotParse = !state.opts.onlyInPath.some(function(pathToParse)  {
+            return state.file.opts.filename.indexOf(pathToParse) !== -1
+          })
+          if (doNotParse) {
+            return
+          }
+        }
         getRidOfAsyncAwait(path, state.file);
       },
     },
